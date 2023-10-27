@@ -26,7 +26,7 @@ usuRutas.get("/usuario/obtenerusuario/:id",check.auth,usuarioControllers.obtener
 usuRutas.get("/usuario/listarusuarios/:page?",check.auth,usuarioControllers.listarUsuarios);
 usuRutas.put("/usuario/actualizarusuario",check.auth,usuarioControllers.actualizarUsuario);
 usuRutas.post("/usuario/montarfotousuario",[check.auth, subida.single("file0")], usuarioControllers.motarFotoUsuario);
-usuRutas.get("/usuario/obtenerimagenavatar/:file",check.auth,usuarioControllers.obtenerImagenAvatar);
+usuRutas.get("/usuario/obtenerimagenavatar/:file",usuarioControllers.obtenerImagenAvatar);
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2023 a las 21:32:49
+-- Tiempo de generación: 28-10-2023 a las 01:26:55
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -91,7 +91,10 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `numero_documento`, `nombre`, `apellido`, `correo`, `telefono`, `nick`, `image`, `password`, `ultima_fecha_sesion`, `id_rol`, `id_tipo_documento`, `fecha_registra`, `estado`) VALUES
 (1, 1083559993, 'silfredo', 'orozco', 'silfredoantonio1991@hotmail.com', '3014402213', 'sorozco25', 'avatar-1698348405648-1083559993.jpg', '$2b$10$uVyug0mExmzD2yrwkh0HC.AAHWnNITl9eE4GBzqwOY7a9p0naIRYS', '2023-10-26 12:41:14', 1, 2, '2023-10-26 12:41:14', 1),
-(3, 2147483647, 'wilian', 'enamorado', 'wilian@hotmail.com', '3026789097', 'wilian02', 'default.png', '$2b$10$uVyug0mExmzD2yrwkh0HC.AAHWnNITl9eE4GBzqwOY7a9p0naIRYS', '2023-10-26 14:21:55', 2, 2, '2023-10-26 14:21:55', 1);
+(3, 2147483647, 'wilian', 'enamorado', 'wilian@hotmail.com', '3026789097', 'wilian02', 'default.png', '$2b$10$uVyug0mExmzD2yrwkh0HC.AAHWnNITl9eE4GBzqwOY7a9p0naIRYS', '2023-10-26 14:21:55', 2, 2, '2023-10-26 14:21:55', 1),
+(4, 2147483647, 'yadiris', 'mejia', 'yadiris@hotmail.com', '3145678922', 'yadiris05', 'default.png', '$2b$10$GPNfXD867c0S07iqCoNIt.SQ68jzkUn48829FXqeg8KiPLTjVLBBm', '2023-10-27 07:56:17', 2, 2, '2023-10-27 07:56:17', 1),
+(5, 123456789, 'camilo', 'sanchez', 'camilosanchez10b@gmail.com', '3014402213', 'camilo07', 'avatar-1698447729453-daniel.jpg', '$2b$10$gWUmRO7rpJ2O33YJiRVZrOPVz8.2R/rRLBVjvc2Orez4Vsben0ZGC', '2023-10-27 14:56:09', 2, 2, '2023-10-27 14:56:09', 1),
+(6, 1234567890, 'danilo', 'orozco', 'danilo@hotmail.com', '3145678901', 'dani07', 'default.png', '$2b$10$CwkpTM99gezKERiHnsWFXOwrmtpwGDGQDYn9JZI1kiwooz/6dHOFS', '2023-10-27 18:05:27', 2, 2, '2023-10-27 18:05:27', 1);
 
 --
 -- Índices para tablas volcadas
@@ -137,7 +140,7 @@ ALTER TABLE `tipo_documento`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

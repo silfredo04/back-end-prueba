@@ -53,7 +53,7 @@ const listarUsuariosPaginacion = async (offset,itemsPerpage) =>{
     // Obtengo la conexión
     const connection = await conexion();
     const [respuesta] = await connection.query(
-        'SELECT id, numero_documento, nombre, apellido, telefono, nick, image, ultima_fecha_sesion, id_rol, id_tipo_documento, fecha_registra  FROM usuario WHERE estado = 1  ORDER BY id LIMIT ?, ?',
+        'SELECT id, numero_documento, nombre, apellido, telefono, nick, image, correo, ultima_fecha_sesion, id_rol, id_tipo_documento, fecha_registra  FROM usuario WHERE estado = 1  ORDER BY id LIMIT ?, ?',
         [offset, itemsPerpage]
         );
     return respuesta;
