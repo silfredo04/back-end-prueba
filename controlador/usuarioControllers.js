@@ -12,7 +12,12 @@ const jwt = require("../servicios/jwt");
 
 
 
+function esCorreoElectronicoValido(correo) {
+    // Expresión regular para validar un correo electrónico
+    const expresionRegularCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+    return expresionRegularCorreo.test(correo);
+}
 
 // Registra usuarios
 
@@ -38,6 +43,16 @@ const registro = async (req, res) => {
             return res.status(400).json({
                 status: "error",
                 message: "No coincide la contraseña"
+            });
+        }else if(parametros.numero_documento < 0){
+            return res.status(400).json({
+                status: "error",
+                message: "Numero de documento invalido"
+            });
+        }else if(!esCorreoElectronicoValido(parametros.correo)){
+            return res.status(400).json({
+                status: "error",
+                message: "Por favor ingresa un correo valido"
             });
         }
 
@@ -214,7 +229,7 @@ const listarUsuarios = async (req, res) => {
     page = parseInt(page);
 
     // Consultar 
-    let itemsPerpage = 5;
+    let itemsPerpage = 20;
 
     let offset = (page - 1) * itemsPerpage;
 
